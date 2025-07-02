@@ -3,8 +3,8 @@
 from setuptools import setup
 
 setup(
-    name='ipip-ipdb',
-    version="1.6.0",
+    name='ipip-ipdb-py',
+    version="1.0.0",
     description=(
         'IPIP.net officially supported IP database ipdb format parsing library'
     ),
@@ -13,7 +13,7 @@ setup(
     maintainer='frk',
     maintainer_email='frk@ipip.net',
     license='Apache License Version 2.0',
-    packages=['ipdb'],
+    packages=['ipip_ipdb_py'],
     platforms=["all"],
     url='https://github.com/ipipdotnet/ipdb-python',
     classifiers=[

@@ -5,7 +5,7 @@ IPIP.net officially supported IP database ipdb format parsing library
 
 ## Installing
 <pre>
-<code>pip install ipip-ipdb</code>
+<code>pip install ipip-ipdb-py</code>
 </pre>
 
 ## Dependents ( python 2.x or before python 3.3 )
@@ -13,9 +13,9 @@ IPIP.net officially supported IP database ipdb format parsing library
 
 ## Code Example
   <pre><code>
-import ipdb
+import ipip_ipdb_py
 
-db = ipdb.City("/path/to/city.ipv4.ipdb")
+db = ipip_ipdb_py.City("/path/to/city.ipv4.ipdb")
 # db.reload("/path/to/city.ipv4.ipdb") # update ipdb database file reload data
 print(db.is_ipv4(), db.is_ipv6())
 print(db.languages()) # support language
@@ -54,9 +54,9 @@ anycast : ANYCAST label
 
 ### IPDB CN District sample code :
   <pre>
-import ipdb
+import ipip_ipdb_py
 
-db = ipdb.District("/path/to/china_district.ipdb")
+db = ipip_ipdb_py.District("/path/to/china_district.ipdb")
 print(db.is_ipv4(), db.is_ipv6())
 print(db.languages())
 print(db.fields())
@@ -68,8 +68,8 @@ print(db.find_info("1.12.13.255", "CN").country_name)
 
 ### IPDB Basestation sample code :
 <pre>
-import ipdb
-db = ipdb.BaseStation("/path/to/base_station.ipdb")
+import ipip_ipdb_py
+db = ipip_ipdb_py.BaseStation("/path/to/base_station.ipdb")
 print(db.is_ipv4(), db.is_ipv6())
 print(db.languages())
 print(db.fields())

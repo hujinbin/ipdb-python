@@ -5,7 +5,7 @@ IPIP.net officially supported IP database ipdb format parsing library
 
 ## Installing
 <pre>
-<code>pip install ipip-ipdb</code>
+<code>pip install ipip-ipdb-py</code>
 </pre>
 
 ## Dependents ( python 2.x or before python 3.3 )
@@ -14,9 +14,9 @@ IPIP.net officially supported IP database ipdb format parsing library
 ## Code Example
 ### 适用于IPDB格式
   <pre><code>
-import ipdb
+import ipip_ipdb_py
 
-db = ipdb.City("/path/to/city.ipv4.ipdb")
+db = ipip_ipdb_py.City("/path/to/city.ipv4.ipdb")
 # db.reload("/path/to/city.ipv4.ipdb") # update ipdb database file reload data
 print(db.is_ipv4(), db.is_ipv6())
 print(db.languages()) # support language
@@ -55,9 +55,9 @@ anycast : ANYCAST
 
 ### 适用于IPDB格式的中国地区 IPv4 区县库
   <pre>
-import ipdb
+import ipip_ipdb_py
 
-db = ipdb.District("/path/to/china_district.ipdb")
+db = ipip_ipdb_py.District("/path/to/china_district.ipdb")
 print(db.is_ipv4(), db.is_ipv6())
 print(db.languages())
 print(db.fields())
@@ -69,8 +69,8 @@ print(db.find_info("1.12.13.255", "CN").country_name)
 
 ### 适用于IPDB格式的 IDC 库
 <pre>
-import ipdb
->>> db = ipdb.IDC("/path/to/idc_list.ipdb") 
+import ipip_ipdb_py
+>>> db = ipip_ipdb_py.IDC("/path/to/idc_list.ipdb") 
 >>> print db.find_info(u"8.142.10.33", "CN").isp_domain
 aliyun.com
 >>> print db.find_info(u"8.142.10.33", "CN").idc
@@ -79,8 +79,8 @@ IDC
 
 ### 适用于IPDB格式的基站 IPv4 库
 <pre>
-import ipdb
-db = ipdb.BaseStation("/path/to/base_station.ipdb")
+import ipip_ipdb_py
+db = ipip_ipdb_py.BaseStation("/path/to/base_station.ipdb")
 print(db.is_ipv4(), db.is_ipv6())
 print(db.languages())
 print(db.fields())
